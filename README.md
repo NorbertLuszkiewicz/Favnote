@@ -41,6 +41,32 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+
+## Technologies and tools
+
+Project is created with:
+
+- React 16
+- React Router
+- React Hooks
+- Redux
+- Styled Components
+- JWT
+- Storybook
+- Axios
+- Formik
+- React Toastify
+- Husky with lint-staged
+
+## Screenshots
+
+![image](https://i.imgur.com/to1iS2I.png)
+
+![image](https://i.imgur.com/IqY2dvF.png)
+  
+![image](https://i.imgur.com/W1bsPms.png)
+![image](https://i.imgur.com/rCW8itg.png)
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -70,16 +96,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-## Screenshots
-
-![image](https://i.imgur.com/to1iS2I.png)
-
-![image](https://i.imgur.com/IqY2dvF.png)
-  
-![image](https://i.imgur.com/W1bsPms.png)
-![image](https://i.imgur.com/rCW8itg.png)
-
 
 
 ## Sources
