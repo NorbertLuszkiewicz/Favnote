@@ -1,5 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Website
+
+See how the website works [Link to Site](https://favnoteaplication.herokuapp.com/login)
+
+#### An overview account :
+
+<b>login:</b> admin
+
+<b>password:</b> admin123
+
+You can add new account, and add notes all of those will be save on live server
+
 ## Backend 
 
 You can find the backend for this project [here](https://github.com/NorbertLuszkiewicz/Favnote-backend).
