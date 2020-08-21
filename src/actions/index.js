@@ -1,5 +1,15 @@
 import axios from 'axios';
 
+const isLocalServer = false;
+
+let SERVER_URL = '';
+
+if (isLocalServer) {
+  SERVER_URL = 'http://localhost:9000/';
+} else {
+  SERVER_URL = 'https://favnoteback.herokuapp.com/';
+}
+
 export const ADD_USER_REQUEST = 'ADD_USER_REQUEST';
 export const ADD_USER_SUCCESS = 'ADD_USER_SUCCESS';
 export const ADD_USER_FAILURE = 'ADD_USER_FAILURE';
@@ -37,7 +47,7 @@ export const addNewUser = (username, password) => dispatch => {
   dispatch({ type: ADD_USER_REQUEST });
 
   return axios
-    .post('http://localhost:9000/api/user/register', {
+    .post(`${SERVER_URL}api/user/register`, {
       username,
       password,
     })
@@ -51,9 +61,9 @@ export const addNewUser = (username, password) => dispatch => {
 
 export const authenticate = (username, password) => dispatch => {
   dispatch({ type: AUTH_REQUEST });
-
   return axios
-    .post('http://localhost:9000/api/user/login', {
+
+    .post(`${SERVER_URL}api/user/login`, {
       username,
       password,
     })
@@ -69,7 +79,7 @@ export const fetchItems = itemType => (dispatch, getState) => {
   dispatch({ type: FETCH_REQUEST });
 
   return axios
-    .get('http://localhost:9000/api/notes/type', {
+    .get(`${SERVER_URL}api/notes/type`, {
       params: {
         type: itemType,
         userID: getState().userID,
@@ -93,7 +103,7 @@ export const addItem = (itemType, itemContent) => (dispatch, getState) => {
   dispatch({ type: ADD_ITEM_REQUEST });
 
   return axios
-    .post('http://localhost:9000/api/note', {
+    .post(`${SERVER_URL}api/note`, {
       userID: getState().userID,
       type: itemType,
       ...itemContent,
@@ -110,7 +120,7 @@ export const addItem = (itemType, itemContent) => (dispatch, getState) => {
 export const removeItem = (itemType, id) => dispatch => {
   dispatch({ type: REMOVE_ITEM_REQUEST });
   axios
-    .delete(`http://localhost:9000/api/note/${id}`)
+    .delete(`${SERVER_URL}api/note/${id}`)
     .then(() => {
       dispatch({
         type: REMOVE_ITEM_SUCCESS,
@@ -128,7 +138,7 @@ export const removeItem = (itemType, id) => dispatch => {
 export const logout = () => dispatch => {
   dispatch({ type: LOGOUT_REQUEST });
   axios
-    .post('http://localhost:9000/api/user/logout')
+    .post(`${SERVER_URL}api/user/logout`)
     .then(() => {
       dispatch({
         type: LOGOUT_SUCCESS,
