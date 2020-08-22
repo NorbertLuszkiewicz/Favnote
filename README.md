@@ -4,13 +4,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 See how the website works [Link to Site](https://favnoteaplication.herokuapp.com/login)
 
-#### An overview account :
+#### An overview account 
 
 <b>login:</b> admin
 
 <b>password:</b> admin123
 
 You can add new account, and add notes all of those will be save on live server
+
+Backend is sate a free server on Heroku thus first login can last 10-20s
 
 ## Backend 
 
