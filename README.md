@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 See how the website works [Link to Site](https://favnoteapp.netlify.app/login)
 
-#### An overview account 
+### An overview account 
 
 <b>login:</b> admin
 
